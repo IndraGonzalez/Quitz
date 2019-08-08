@@ -1,16 +1,15 @@
 import React from 'react';
+import {Button} from "./Button/Button";
 
 const DayLoggerHeader = () => (<p> Did you smoke today? </p>);
-const YesButton = () => (<button>Yes, I did smoke</button>);
-const NoButton = () => (<button>No, I did not smoke</button>);
 
 export class DayLogger extends React.Component {
     render() {
         return (
             <div className="DayLogger">
                 <DayLoggerHeader/>
-                <YesButton/>
-                <NoButton/>
+                <Button text={"Yes, I did smoke"}/>
+                <Button text={"No, I did not smoke"}/>
             </div>
         )
     }
