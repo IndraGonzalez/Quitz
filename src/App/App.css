@@ -1,0 +1,23 @@
+
+.App {
+    background: aquamarine
+}
+
+.DaysWithoutSmoking {
+  font-family: Avenir-Book, serif;
+    font-size: 20px;
+    color: #000000;
+    letter-spacing: 2px;
+    text-align: left;
+}
+
+button {
+    background: #6563A4;
+    box-shadow: 0 0 3px 0 rgba(0, 0, 0, 0.06);
+    border-radius: 3px;
+  font-family: Avenir-Black, serif;
+    font-size: 16px;
+    color: #FFFFFF;
+    letter-spacing: 1px;
+    text-align: center;
+}
