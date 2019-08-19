@@ -3,11 +3,11 @@ import {Button} from "./Button/Button";
 
 const DayLoggerHeader = () => (<p> Did you smoke today? </p>);
 
-export const DayLogger = ({dayHandler, navigator}) =>
+export const DayLogger = ({dayHandler: increaseDaysFn, dayReset: resetDaysFn, navigator}) =>
     (
         <div className="DayLogger">
             <DayLoggerHeader/>
-            <Button onClickFn={() => navigator('landingPage')} text={"Yes, I did smoke"}/>
-            <Button onClickFn={dayHandler} text={"No, I did not smoke"}/>
+            <Button onClickFn={resetDaysFn} text={"Yes, I did smoke"}/>
+            <Button onClickFn={increaseDaysFn} text={"No, I did not smoke"}/>
         </div>
     );

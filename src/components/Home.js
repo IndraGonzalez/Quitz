@@ -16,15 +16,19 @@ export class Home extends React.Component {
         this.setState({page: newPage})
     };
 
-    updateDays = () => {
+    increaseDays = () => {
         this.setState({page:'landingPage', days: this.state.days + 1});
+    };
+
+    resetDays = () => {
+        this.setState({page:'landingPage', days: 0});
     };
 
     render() {
         if (this.state.page === 'landingPage') {
             return (<LandingPage days={this.state.days} navigator={this.navigate}/>)
         } else if (this.state.page === 'dayLogger') {
-            return (<DayLogger dayHandler={this.updateDays} navigator={this.navigate}/>)
+            return (<DayLogger dayHandler={this.increaseDays} dayReset={this.resetDays} navigator={this.navigate}/>)
         }
     }
 }
